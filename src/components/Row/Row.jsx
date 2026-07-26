@@ -22,7 +22,7 @@ const Row = ({title, fetchUrl, isLargeRow}) => {
     },[fetchUrl])
     console.log("Movies" , movies)
 
-    
+
 const handleClick = (movie) => {
     if (trailerUrl) {
         setTrailerUrl("");
@@ -55,18 +55,27 @@ const handleClick = (movie) => {
             ))}
         </div>
 
-        {trailerUrl && (
-            <YouTube
-                videoId={trailerUrl}
-                opts={{
-                    height: "390",
-                    width: "100%",
-                    playerVars: {
-                        autoplay: 1,
-                    },
-                }}
-            />
-        )}
+      {trailerUrl && (
+    <div className="trailer-container">
+        <button
+            className="close-btn"
+            onClick={() => setTrailerUrl("")}
+        >
+            ✖
+        </button>
+
+        <YouTube
+            videoId={trailerUrl}
+            opts={{
+                height: "390",
+                width: "100%",
+                playerVars: {
+                    autoplay: 1,
+                },
+            }}
+        />
+    </div>
+)}
     </div>
 );
 }
