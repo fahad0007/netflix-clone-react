@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Nav.css"
-import NetflixLogo from "../../assets/images/NetflixLogo.png"
+import NetflixLogo from "../../assets/images/NetFlixLogo.png"
 import NetflixAvatar from "../../assets/images/NetflixAvatar.png"
 import { Link } from 'react-router-dom'
 const Nav = () => {
